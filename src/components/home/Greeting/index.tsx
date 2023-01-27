@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import BigImage from '../../../images/Greeting/greeting.jpeg';
-import SmallImage from '../../../images/Greeting/greetingSmall.jpeg';
+import BigImage from '../../../../public/greeting.jpeg';
+import SmallImage from '../../../../public/greetingSmall.jpeg';
 import { styles } from './style';
 
 const Greeting = () => {
