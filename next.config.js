@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    loader: 'default',
+    loader: 'imgix',
+    path: 'https://noop/',
   },
   experimental: {
     appDir: true,
