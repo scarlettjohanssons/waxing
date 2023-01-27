@@ -1,4 +1,3 @@
-import {createAction} from '@reduxjs/toolkit';
 import uiSlice from './slice';
 
 const actions = {

@@ -1,5 +1,5 @@
-import { createSelector } from 'reselect';
 import { RootState } from '@/setup/typedefs';
+import { createSelector } from 'reselect';
 
 const uiSelector = (state: RootState) => state.ui;
 

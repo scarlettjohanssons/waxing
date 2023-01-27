@@ -1,4 +1,4 @@
-import { ThemeOptions, createTheme } from '@mui/material/styles';
+import { createTheme, ThemeOptions } from '@mui/material/styles';
 import { MuiButton } from './components/MuiButton';
 import { MuiIconButton } from './components/MuiIconButton';
 import { MuiSvgIcon } from './components/MuiSVGIcon';

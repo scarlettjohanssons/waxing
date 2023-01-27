@@ -1,4 +1,3 @@
-import { useScrollDirection } from '@/hooks/useScrollDirection';
 import React, { useEffect, useRef, useState } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -16,7 +15,6 @@ const Sensor: React.FC<SensorProps> = ({
 }) => {
   const [sensorOne, setSensorOne] = useState(false);
   const [sensorTwo, setSensorTwo] = useState(false);
-  const direction = useScrollDirection();
   const bottomRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
 

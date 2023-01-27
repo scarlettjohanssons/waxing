@@ -7,7 +7,7 @@ export const commonColors = {
   greenHover: '#4CAD1F',
   purple: '#5B52E7',
   grey: '#515151',
-  link: '#885D4D'
+  link: '#885D4D',
 };
 
 export const palette: PaletteOptions = {
