@@ -11,6 +11,7 @@ const nextConfig = {
   //   path: 'https://scarlettjohanssons.github.io/waxing/',
   // },
   images: {
+    loader: 'default',
     remotePatterns: [
       {
         protocol: 'https',
