@@ -12,6 +12,7 @@ const nextConfig = {
   // },
   images: {
     loader: 'default',
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -23,6 +24,9 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
+    images: {
+      unoptimized: true,
+    },
   },
 };
 

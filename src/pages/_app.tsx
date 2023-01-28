@@ -1,4 +1,4 @@
-import { createStore } from '@/setup/configureStore';
+import { useStore } from '@/setup/configureStore';
 import { Poppins } from '@next/font/google';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -9,9 +9,9 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '700'],
 });
 
-export const store = createStore();
-
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const store1 = useStore(pageProps.initialReduxState);
+
   return (
     <>
       <Head>
@@ -53,7 +53,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           content="http://epilstudio.com.ua/openGraph.jpeg"
         />
       </Head>
-      <Provider store={store}>
+      <Provider store={store1}>
         <main className={poppins.className}>
           <Component {...pageProps} />
         </main>
