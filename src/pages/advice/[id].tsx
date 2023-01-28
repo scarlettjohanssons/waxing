@@ -3,7 +3,7 @@ import Advice from '@/components/advice/Advice';
 import AppLayout from '@/layouts/AppLayouts';
 import { initializeStore } from '@/setup/configureStore';
 import { initialDispatcher } from '@/setup/initialDispatcher';
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 const AdvicePage = ({ initialReduxState }: any) => {
   return (
@@ -13,7 +13,14 @@ const AdvicePage = ({ initialReduxState }: any) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticPaths: GetStaticPaths<{ id: any }> = async () => {
+  return {
+    paths: [], //indicates that no page needs be created at build time
+    fallback: 'blocking', //indicates the type of fallback
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
   const { store } = await initialDispatcher(context, initializeStore());
 
   const id = context.params?.id;
