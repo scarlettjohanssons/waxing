@@ -1,14 +1,14 @@
-import PartOfBody from '@/components/common/PartOfBody';
+import { getAdvices } from '@/bus/home/selectors';
+import Advice from '@/components/common/Advice';
 import { Box, Grid, Typography } from '@mui/material';
+import { useSelector } from 'react-redux';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import ArmImage from '../../../images/OurServices/arm.png';
-import BodyImage from '../../../images/OurServices/body.png';
-import FaceImage from '../../../images/OurServices/face.png';
-import LegsImage from '../../../images/OurServices/legs.png';
 import { styles } from './style';
 
 const OurAdvices = () => {
+  const advices = useSelector(getAdvices);
+
   return (
     <Box sx={styles.root}>
       <Box sx={styles.infoWrapper}>
@@ -22,38 +22,11 @@ const OurAdvices = () => {
           </Typography>
         </Box>
         <Grid container spacing={3.75}>
-          <Grid item xs={12} md={6}>
-            <PartOfBody
-              image={LegsImage}
-              info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/legs-waxing'}
-              part={'Legs Waxing'}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <PartOfBody
-              image={ArmImage}
-              info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/arms-waxing'}
-              part={'Arms Waxing'}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <PartOfBody
-              image={BodyImage}
-              info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/body-waxing'}
-              part={'Body Waxing'}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <PartOfBody
-              image={FaceImage}
-              info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/face-waxing'}
-              part={'Face Waxing'}
-            />
-          </Grid>
+          {advices.map((advice) => (
+            <Grid key={advice.id} item xs={12} sm={6} md={4}>
+              <Advice advice={advice} />
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Box>

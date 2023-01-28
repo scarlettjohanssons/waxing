@@ -1,5 +1,6 @@
 import BookNow from '@/components/home/BookNow';
 import Greeting from '@/components/home/Greeting';
+import OurAdvices from '@/components/home/OurAdvices';
 import OurServices from '@/components/home/OurServices';
 import Story from '@/components/home/Story';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
@@ -17,7 +18,7 @@ const Home = () => {
       <BookNow />
       <Box padding={'0 20px'} maxWidth={'1200px'} margin={'20px auto'}>
         <WhyChooseUs />
-        {/*<OurAdvices />*/}
+        <OurAdvices />
       </Box>
     </AppLayout>
   );

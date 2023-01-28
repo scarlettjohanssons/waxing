@@ -25,7 +25,6 @@ export const styles = {
     },
   },
   infoWrapper: {
-    flex: '50%',
     display: 'flex',
     flexDirection: 'column',
   },
