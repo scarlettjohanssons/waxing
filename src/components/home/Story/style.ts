@@ -11,14 +11,11 @@ export const styles = {
   },
   imageWrapper: {
     position: 'relative',
-    '& > div': {
-      maxWidth: '100%',
+    maxWidth: '100%',
+    width: '100%',
+    img: {
       width: '100%',
-      position: 'relative',
-      img: {
-        width: '100%',
-        height: 'auto',
-      },
+      height: 'auto',
     },
     '@media (max-width: 888px)': {
       width: '80%',
