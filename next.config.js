@@ -1,10 +1,22 @@
 /** @type {import('next').NextConfig} */
-// const repo = 'waxing';
-// const assetPrefix = `/${repo}/`;
-// const basePath = `/${repo}`;
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+console.log('isGithubActions', isGithubActions);
+
+let assetPrefix = '';
+let basePath = '/';
+
+if (isGithubActions) {
+  // trim off `<owner>/`
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
+
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
+}
+const pathPrefix = process.env.NODE_ENV === 'production' ? '/waxing' : '';
 const nextConfig = {
-  // assetPrefix: assetPrefix,
-  // basePath: basePath,
+  assetPrefix: pathPrefix,
+  // assetPrefix: '',
+  // basePath: '/',
   // basePath: 'https://scarlettjohanssons.github.io/waxing/',
   // images: {
   //   loader: 'imgix',
@@ -24,9 +36,9 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-    images: {
-      unoptimized: true,
-    },
+  },
+  env: {
+    pathPrefix,
   },
 };
 
