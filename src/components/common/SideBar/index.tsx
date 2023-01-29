@@ -1,4 +1,3 @@
-import Logo from '@/images/logo.png';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, IconButton, SwipeableDrawer } from '@mui/material';
 import Image from 'next/image';
@@ -25,7 +24,7 @@ const SideBar: React.FC<SideBarCartProps> = ({ open, toggleDrawer }) => {
       <Box>
         <Box sx={styles.drawerHead}>
           <Link href={'/'} style={{ textDecoration: 'none', display: 'flex' }}>
-            <Image src={Logo} alt="Logo" width={200} height={58.5} />
+            <Image src={'/logo.png'} alt="Logo" width={200} height={58.5} />
           </Link>
           <IconButton
             aria-label={'close drawer'}

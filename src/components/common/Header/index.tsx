@@ -12,7 +12,6 @@ import { Box, IconButton, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
-import Logo from '../../../images/logo.png';
 import { styles } from './style';
 
 const Header = () => {
@@ -87,7 +86,7 @@ const Header = () => {
           </Box>
         )}
         <Link href={'/'} style={{ textDecoration: 'none', display: 'flex' }}>
-          <Image src={Logo} alt="Logo" width={200} height={58.5} />
+          <Image src={'/logo.png'} alt="Logo" width={200} height={58.5} />
         </Link>
         {isMobile ? (
           <>

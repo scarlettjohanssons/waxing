@@ -5,10 +5,10 @@ import { initializeStore } from '@/setup/configureStore';
 import { initialDispatcher } from '@/setup/initialDispatcher';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-const AdvicePage = ({ initialReduxState }: any) => {
+const AdvicePage = () => {
   return (
     <AppLayout>
-      <Advice advice={initialReduxState.home.currentAdvice} />
+      <Advice />
     </AppLayout>
   );
 };

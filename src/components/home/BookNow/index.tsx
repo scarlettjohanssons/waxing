@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from '@mui/material';
-import bg from '../../../images/BookNow/image.jpeg';
 import { styles } from './style';
 
 const BookNow = () => {
@@ -7,7 +6,7 @@ const BookNow = () => {
     <Box
       sx={{
         ...styles.root,
-        backgroundImage: `url(${bg.src})`,
+        backgroundImage: `url(/bookNowImage.jpeg)`,
         width: '100%',
         height: '100%',
       }}>

@@ -1,7 +1,5 @@
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-import BigImage from '../../../images/Story/story.jpeg';
-import WaxImage from '../../../images/Story/wax.webp';
 import { styles } from './style';
 
 const Story = () => {
@@ -56,7 +54,7 @@ const Story = () => {
           style={{
             borderBottomLeftRadius: '200px',
           }}
-          src={BigImage}
+          src={'/story.jpeg'}
           alt={''}
           width={600}
           height={400}
@@ -140,7 +138,7 @@ const Story = () => {
               {/*    );*/}
               {/*  }}*/}
               {/*</Spring>*/}
-              <Image src={WaxImage} alt={''} width={300} height={200} />
+              <Image src={'/wax.webp'} alt={''} width={300} height={200} />
             </Box>
           </Box>
         </Box>

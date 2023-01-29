@@ -1,7 +1,7 @@
 import { IAdvice } from '@/bus/home/typedefs';
+import PrefixedLink from '@/components/common/PrefixedLink';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { styles } from './style';
 
@@ -12,12 +12,18 @@ type AdviceProps = {
 const Advice: React.FC<AdviceProps> = ({ advice }) => {
   return (
     <Box sx={styles.root}>
-      <Link href={`/advice/${advice.id}`} style={{ textDecoration: 'none' }}>
+      <PrefixedLink href={`/advice/${advice.id}`}>
         <Box sx={styles.imageWrapper}>
           <Image alt={'image'} src={advice.image} width={350} height={260} />
         </Box>
         <Typography variant={'h5'}>{advice.title}</Typography>
-      </Link>
+      </PrefixedLink>
+      {/*<Link href={`/advice/${advice.id}`} style={{ textDecoration: 'none' }}>*/}
+      {/*  <Box sx={styles.imageWrapper}>*/}
+      {/*    <Image alt={'image'} src={advice.image} width={350} height={260} />*/}
+      {/*  </Box>*/}
+      {/*  <Typography variant={'h5'}>{advice.title}</Typography>*/}
+      {/*</Link>*/}
     </Box>
   );
 };

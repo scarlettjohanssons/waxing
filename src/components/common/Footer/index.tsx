@@ -4,7 +4,6 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../../../images/logo.png';
 import { styles } from './style';
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
       <Box padding={'0 20px'} maxWidth={'1200px'} margin={'20px auto'}>
         <Box sx={styles.wrapper}>
           <Link href={'/'} style={{ textDecoration: 'none', display: 'flex' }}>
-            <Image src={Logo} alt="Logo" width={200} height={58.5} />
+            <Image src={'/logo.png'} alt="Logo" width={200} height={58.5} />
           </Link>
           <Box display={'flex'} gap={'20px'} mt={'10px'}>
             <Link style={styles.link} href={'https://t.me/KatrinKukobko'}>

@@ -1,8 +1,4 @@
 import Reason from '@/components/common/Reason';
-import HygienicPlaceImage from '@/images/WhyChooseUs/hygienicPlace.jpeg';
-import NaturalIngredientsImage from '@/images/WhyChooseUs/naturalIngredients.jpeg';
-import PainlessWaxingImage from '@/images/WhyChooseUs/painlessWaxing.jpeg';
-import ProfessionalTeamImage from '@/images/WhyChooseUs/professionalTeam.jpeg';
 import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { styles } from './style';
 
@@ -23,7 +19,7 @@ const WhyChooseUs = () => {
         <Grid container spacing={3.75}>
           <Grid item xs={12} sm={6} md={3}>
             <Reason
-              image={ProfessionalTeamImage}
+              image={'/professionalTeam.jpeg'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               title={'Professional Team'}
               imageTop
@@ -32,7 +28,7 @@ const WhyChooseUs = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <Reason
-              image={HygienicPlaceImage}
+              image={'/hygienicPlace.jpeg'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               title={'Hygienic Place'}
               imageTop={isSM}
@@ -40,7 +36,7 @@ const WhyChooseUs = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <Reason
-              image={NaturalIngredientsImage}
+              image={'/naturalIngredients.jpeg'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               title={'Natural Ingredients'}
               imageTop
@@ -48,7 +44,7 @@ const WhyChooseUs = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <Reason
-              image={PainlessWaxingImage}
+              image={'/painlessWaxing.jpeg'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               title={'Painless Waxing'}
               imageTop={isSM}

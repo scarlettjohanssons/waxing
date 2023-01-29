@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import BigImage from '../../../../public/greeting.jpeg';
-import SmallImage from '../../../../public/greetingSmall.jpeg';
 import { styles } from './style';
+// import BigImage from '/greeting.jpeg';
+// import SmallImage from '/greetingSmall.jpeg';
 
 const Greeting = () => {
   return (
@@ -20,7 +20,7 @@ const Greeting = () => {
                 borderTopRightRadius: '200px',
                 left: 0,
               }}
-              src={BigImage}
+              src={'/greeting.jpeg'}
               alt={''}
               width={333.28}
               height={500}
@@ -29,7 +29,7 @@ const Greeting = () => {
           <Box maxWidth={'92.91px'} width={'100%'} position={'relative'}>
             <Image
               style={{ position: 'absolute', left: '-50px', bottom: '50px' }}
-              src={SmallImage}
+              src={'/greetingSmall.jpeg'}
               alt={''}
               width={92.91}
               height={100}

@@ -1,11 +1,6 @@
 import PartOfBody from '@/components/common/PartOfBody';
 import { Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import ArmImage from '../../../images/OurServices/arm.png';
-import BodyImage from '../../../images/OurServices/body.png';
-import FaceImage from '../../../images/OurServices/face.png';
-import LegsImage from '../../../images/OurServices/legs.png';
-import ServicesImage from '../../../images/OurServices/servicesImage.jpeg';
 import { styles } from './style';
 
 const OurServices = () => {
@@ -25,7 +20,7 @@ const OurServices = () => {
         <Grid container spacing={3.75}>
           <Grid item xs={12} md={6}>
             <PartOfBody
-              image={LegsImage}
+              image={'/legs.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               link={'/legs-waxing'}
               part={'Legs Waxing'}
@@ -33,7 +28,7 @@ const OurServices = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <PartOfBody
-              image={ArmImage}
+              image={'/arm.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               link={'/arms-waxing'}
               part={'Arms Waxing'}
@@ -41,7 +36,7 @@ const OurServices = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <PartOfBody
-              image={BodyImage}
+              image={'/body.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               link={'/body-waxing'}
               part={'Body Waxing'}
@@ -49,7 +44,7 @@ const OurServices = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <PartOfBody
-              image={FaceImage}
+              image={'/face.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
               link={'/face-waxing'}
               part={'Face Waxing'}
@@ -58,7 +53,7 @@ const OurServices = () => {
         </Grid>
       </Box>
       <Box sx={styles.imageWrapper}>
-        <Image src={ServicesImage} alt={''} width={400} height={600} />
+        <Image src={'/servicesImage.jpeg'} alt={''} width={400} height={600} />
       </Box>
     </Box>
   );
