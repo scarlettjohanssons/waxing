@@ -16,7 +16,7 @@ const pathPrefix = process.env.NODE_ENV === 'production' ? '/waxing' : '';
 const nextConfig = {
   assetPrefix: pathPrefix,
   // assetPrefix: '',
-  // basePath: '/',
+  basePath: pathPrefix,
   // basePath: 'https://scarlettjohanssons.github.io/waxing/',
   // images: {
   //   loader: 'imgix',

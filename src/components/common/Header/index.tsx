@@ -23,6 +23,8 @@ const Header = () => {
     dispatch(uiActions.setSidebarOpen(open));
   };
 
+  // const path = process.env.NODE_ENV === 'production' ? '/waxing' : '';
+
   return (
     <>
       <Box sx={styles.header}>
@@ -86,7 +88,13 @@ const Header = () => {
           </Box>
         )}
         <Link href={'/'} style={{ textDecoration: 'none', display: 'flex' }}>
-          <Image src={'/logo.png'} alt="Logo" width={200} height={58.5} />
+          <Image
+            src={`/logo.png`}
+            // src={`${path}/logo.png`}
+            alt="Logo"
+            width={200}
+            height={58.5}
+          />
         </Link>
         {isMobile ? (
           <>
