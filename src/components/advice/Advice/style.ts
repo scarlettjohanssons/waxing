@@ -2,20 +2,9 @@ export const styles = {
   root: {
     position: 'relative',
   },
-  bg: {
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    width: '100%',
-    height: '300px',
-    backgroundRepeat: 'no-repeat',
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    opacity: 0.5,
-    zIndex: -1,
-  },
   imageWrapper: {
+    marginRight: '10px',
+    display: 'flex',
     maxWidth: '300px',
     width: '100%',
     position: 'relative',
@@ -25,11 +14,16 @@ export const styles = {
       width: '100%',
       height: 'auto',
     },
-    '&:hover': {
-      transform: 'translateY(-10px)',
+    '@media (max-width: 720px)': {
+      margin: 0,
     },
   },
   listItem: {
     borderLeft: '1px solid #6A473C',
+  },
+  wrapper: {
+    '@media (max-width: 720px)': {
+      flexDirection: 'column-reverse',
+    },
   },
 };

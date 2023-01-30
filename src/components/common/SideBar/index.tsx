@@ -23,7 +23,10 @@ const SideBar: React.FC<SideBarCartProps> = ({ open, toggleDrawer }) => {
       onOpen={() => toggleDrawer(true)}>
       <Box>
         <Box sx={styles.drawerHead}>
-          <Link href={'/'} style={{ textDecoration: 'none', display: 'flex' }}>
+          <Link
+            href={'/'}
+            style={{ textDecoration: 'none', display: 'flex' }}
+            onClick={() => toggleDrawer(false)}>
             <Image src={'/logo.png'} alt="Logo" width={200} height={58.5} />
           </Link>
           <IconButton
@@ -35,19 +38,34 @@ const SideBar: React.FC<SideBarCartProps> = ({ open, toggleDrawer }) => {
         </Box>
       </Box>
       <Box sx={styles.linkWrapper}>
-        <Link href={'/'} style={styles.link}>
+        <Link
+          href={'/'}
+          style={styles.link}
+          onClick={() => toggleDrawer(false)}>
           Home
         </Link>
-        <Link href={'/about'} style={styles.link}>
+        <Link
+          href={'/about'}
+          style={styles.link}
+          onClick={() => toggleDrawer(false)}>
           About
         </Link>
-        <Link href={'/pricing'} style={styles.link}>
+        <Link
+          href={'/pricing'}
+          style={styles.link}
+          onClick={() => toggleDrawer(false)}>
           Pricing
         </Link>
-        <Link href={'/blog'} style={styles.link}>
+        <Link
+          href={'/blog'}
+          style={styles.link}
+          onClick={() => toggleDrawer(false)}>
           Blog
         </Link>
-        <Link href={'/contact'} style={styles.link}>
+        <Link
+          href={'/contact'}
+          style={styles.link}
+          onClick={() => toggleDrawer(false)}>
           Contact
         </Link>
       </Box>

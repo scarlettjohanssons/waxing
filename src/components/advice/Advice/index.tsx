@@ -15,8 +15,12 @@ const Advice: React.FC<AdviceProps> = () => {
     <Box sx={styles.root}>
       <PageTitle title={advice.title} />
       <Box padding={'0 20px'} maxWidth={'1200px'} margin={'20px auto'}>
-        <Box display={'flex'} gap={'20px'} alignItems={'flex-end'}>
-          <Box sx={styles.imageWrapper} mr={'10px'}>
+        <Box
+          display={'flex'}
+          gap={'20px'}
+          alignItems={'flex-end'}
+          sx={styles.wrapper}>
+          <Box sx={styles.imageWrapper}>
             <Image
               alt={'image'}
               src={advice.image}
@@ -30,7 +34,7 @@ const Advice: React.FC<AdviceProps> = () => {
             />
           </Box>
           <Box flex={1}>
-            <Typography>{advice.body}</Typography>
+            <Typography variant={'body2'}>{advice.body}</Typography>
           </Box>
         </Box>
         {advice.list && (
@@ -38,16 +42,22 @@ const Advice: React.FC<AdviceProps> = () => {
             <List>
               {advice.list.map((item: string) => (
                 <ListItem key={item} sx={styles.listItem}>
-                  <Typography>{item}</Typography>
+                  <Typography variant={'body2'}>{item}</Typography>
                 </ListItem>
               ))}
             </List>
           </Box>
         )}
         <Box>
-          <Typography mt={'10px'}>{advice?.body2}</Typography>
-          <Typography mt={'10px'}>{advice?.body3}</Typography>
-          <Typography mt={'10px'}>{advice?.body4}</Typography>
+          <Typography mt={'10px'} variant={'body2'}>
+            {advice?.body2}
+          </Typography>
+          <Typography mt={'10px'} variant={'body2'}>
+            {advice?.body3}
+          </Typography>
+          <Typography mt={'10px'} variant={'body2'}>
+            {advice?.body4}
+          </Typography>
         </Box>
       </Box>
     </Box>

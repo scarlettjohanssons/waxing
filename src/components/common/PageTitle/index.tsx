@@ -12,14 +12,17 @@ const PageTitle: React.FC<AdviceProps> = ({ title }) => {
       height={'300px'}
       display={'flex'}
       justifyContent={'center'}
+      padding={'0 20px'}
       alignItems={'center'}>
       <Box
         sx={{
           ...styles.bg,
-          backgroundImage: `url(/adviceImage.jpeg)`,
+          backgroundImage: `url(/bgImage.jpeg)`,
         }}
       />
-      <Typography variant={'h2'}>{title}</Typography>
+      <Typography variant={'h3'} textAlign={'center'}>
+        {title}
+      </Typography>
     </Box>
   );
 };
