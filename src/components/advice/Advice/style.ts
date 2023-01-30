@@ -16,7 +16,7 @@ export const styles = {
     zIndex: -1,
   },
   imageWrapper: {
-    maxWidth: '100%',
+    maxWidth: '300px',
     width: '100%',
     position: 'relative',
     transition: 'all 0.3s ease',

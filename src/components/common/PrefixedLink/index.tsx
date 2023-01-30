@@ -13,8 +13,6 @@ const PrefixedLink: React.FC<AdviceProps> = ({
   children,
   ...props
 }) => {
-  console.log(process.env.pathPrefix);
-
   return (
     <Link
       href={href}

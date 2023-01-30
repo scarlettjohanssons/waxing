@@ -89,7 +89,7 @@ const Header = () => {
         )}
         <Link href={'/'} style={{ textDecoration: 'none', display: 'flex' }}>
           <Image
-            src={`./logo.png`}
+            src={`/logo.png`}
             // src={`${path}/logo.png`}
             alt="Logo"
             width={200}
