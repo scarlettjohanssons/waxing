@@ -24,6 +24,7 @@ export const styles = {
       objectFit: 'cover',
       width: '100%',
       height: 'auto',
+      borderRadius: '12px',
     },
     '&:hover': {
       transform: 'translateY(-10px)',
@@ -31,5 +32,8 @@ export const styles = {
   },
   listItem: {
     borderLeft: '1px solid #6A473C',
+    '& p': {
+      textIndent: 0,
+    },
   },
 };

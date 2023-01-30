@@ -42,6 +42,7 @@ export const MuiTypography: Partial<Components<Theme>> = {
         style: {
           fontSize: '16px',
           fontWeight: 300,
+          textIndent: '1.5em',
           '@media (max-width: 1024px)': {
             fontSize: '14px',
           },

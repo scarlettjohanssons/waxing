@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           content="Послуги епіляції з дотриманням всіх гігієнічних норм та бережливого відношення до шкіри. Приємні ціни, абонемент зі знижками, затишний кабінет в салоні краси на Шулявці чекає на вас."
         />
 
-        <meta property="og:url" content="http://epilstudio.com.ua/" />
+        <meta property="og:url" content="https://waxing.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Шугаринг та воскова епіляція" />
         <meta
@@ -31,18 +31,18 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           property="og:image"
-          content="http://epilstudio.com.ua/openGraph.jpeg"
+          content="https://waxing.vercel.app/openGraph.jpeg"
         />
         <meta
           property="og:image:secure_url"
-          content="http://epilstudio.com.ua/openGraph.jpeg"
+          content="https://waxing.vercel.app/openGraph.jpeg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="epilstudio.com.ua" />
-        <meta property="twitter:url" content="http://epilstudio.com.ua/" />
+        <meta property="twitter:domain" content="waxing.vercel.app" />
+        <meta property="twitter:url" content="https://waxing.vercel.app/" />
         <meta name="twitter:title" content="Шугаринг та воскова епіляція" />
         <meta
           name="twitter:description"
@@ -50,7 +50,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           name="twitter:image"
-          content="http://epilstudio.com.ua/openGraph.jpeg"
+          content="https://waxing.vercel.app/openGraph.jpeg"
         />
       </Head>
       <Provider store={store1}>

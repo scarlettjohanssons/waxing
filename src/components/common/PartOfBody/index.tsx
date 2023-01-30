@@ -21,7 +21,9 @@ const PartOfBody: React.FC<PartOfBodyProps> = ({ image, info, link, part }) => {
         <Typography variant={'h5'} mt={'10px'}>
           {part}
         </Typography>
-        <Typography m={'10px 0'}>{info}</Typography>
+        <Typography m={'10px 0'} variant={'body2'}>
+          {info}
+        </Typography>
         <Link style={styles.link} href={link}>
           Learn more &#x2192;
         </Link>

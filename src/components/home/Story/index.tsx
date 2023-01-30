@@ -99,7 +99,7 @@ const Story = () => {
                 </Typography>
                 <Typography variant={'body2'}>+</Typography>
               </Box>
-              <Typography variant={'body1'}>Happy Customers</Typography>
+              <Typography variant={'body2'}>Happy Customers</Typography>
             </Box>
             <Box
               display={'flex'}
@@ -114,7 +114,7 @@ const Story = () => {
                 </Typography>
                 <Typography variant={'body2'}>+</Typography>
               </Box>
-              <Typography variant={'body1'}>Year Experience</Typography>
+              <Typography variant={'body2'}>Year Experience</Typography>
             </Box>
           </Box>
           <Box>

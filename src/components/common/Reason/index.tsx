@@ -41,7 +41,10 @@ const Reason: React.FC<ReasonProps> = ({
             {title}
           </Typography>
         )}
-        <Typography m={'10px 0'} textAlign={imageTop ? 'left' : 'right'}>
+        <Typography
+          m={'10px 0'}
+          textAlign={imageTop ? 'left' : 'right'}
+          variant={'body2'}>
           {info}
         </Typography>
         {!imageTop && (

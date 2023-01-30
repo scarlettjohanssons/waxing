@@ -52,22 +52,22 @@ const Footer = () => {
           </Typography>
           <Box display={'flex'} gap={'10px'} flexDirection={'column'}>
             <Box display={'flex'}>
-              <Typography variant={'body1'} width={'150px'}>
+              <Typography variant={'body2'} width={'150px'}>
                 Monday - Friday:
               </Typography>
-              <Typography variant={'body1'}>09:00 AM - 19:00 PM</Typography>
+              <Typography variant={'body2'}>09:00 AM - 19:00 PM</Typography>
             </Box>
             <Box display={'flex'}>
-              <Typography variant={'body1'} width={'150px'}>
+              <Typography variant={'body2'} width={'150px'}>
                 Saturday - Sunday:
               </Typography>
-              <Typography variant={'body1'}>10:00 AM - 20:00 PM</Typography>
+              <Typography variant={'body2'}>10:00 AM - 20:00 PM</Typography>
             </Box>
           </Box>
         </Box>
       </Box>
       <Box sx={styles.footer}>
-        <Typography variant={'body1'} color={'#FFF'}>
+        <Typography variant={'body2'} color={'#FFF'}>
           Copyright © {new Date().getFullYear()} | All rights reserved | Katrin
           Kukobko
         </Typography>

@@ -8,9 +8,9 @@ export interface IAdvice {
   text: string;
   title: string;
   body: string;
-  body2?: string;
-  body3?: string;
-  body4?: string;
-  list?: string[];
+  body2: string | null;
+  body3: string | null;
+  body4: string | null;
+  list: string[] | null;
   image: any;
 }

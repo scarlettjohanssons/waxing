@@ -1,7 +1,7 @@
 import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Header';
 import { theme } from '@/theme';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 
 type AppLayoutProps = {
@@ -11,9 +11,17 @@ type AppLayoutProps = {
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      {children}
-      <Footer />
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'space-between'}
+        minHeight={'100vh'}>
+        <Box>
+          <Header />
+          {children}
+        </Box>
+        <Footer />
+      </Box>
       <CssBaseline />
     </ThemeProvider>
   );

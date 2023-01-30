@@ -22,7 +22,7 @@ const OurServices = () => {
             <PartOfBody
               image={'/legs.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/legs-waxing'}
+              link={'/pricing/legs'}
               part={'Legs Waxing'}
             />
           </Grid>
@@ -30,7 +30,7 @@ const OurServices = () => {
             <PartOfBody
               image={'/arm.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/arms-waxing'}
+              link={'/pricing/arms'}
               part={'Arms Waxing'}
             />
           </Grid>
@@ -38,7 +38,7 @@ const OurServices = () => {
             <PartOfBody
               image={'/body.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/body-waxing'}
+              link={'/pricing/body'}
               part={'Body Waxing'}
             />
           </Grid>
@@ -46,7 +46,7 @@ const OurServices = () => {
             <PartOfBody
               image={'/face.png'}
               info={'Lorem ipsum dolor sit amet, consectetur adipiscing'}
-              link={'/face-waxing'}
+              link={'/pricing/face'}
               part={'Face Waxing'}
             />
           </Grid>

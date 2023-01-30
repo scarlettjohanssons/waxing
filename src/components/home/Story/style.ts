@@ -5,20 +5,20 @@ export const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: '30px',
-    '@media (max-width: 888px)': {
+    '@media (max-width: 959px)': {
       flexDirection: 'column',
     },
   },
   imageWrapper: {
     position: 'relative',
-    maxWidth: '100%',
+    maxWidth: '600px',
     width: '100%',
     img: {
       width: '100%',
       height: 'auto',
     },
-    '@media (max-width: 888px)': {
-      width: '80%',
+    '@media (max-width: 959px)': {
+      maxWidth: '100%',
     },
     '@media (max-width: 460px)': {
       '& > div:last-child': {
@@ -27,7 +27,7 @@ export const styles = {
     },
   },
   infoWrapper: {
-    flex: '50%',
+    flex: 1,
     display: 'flex',
     flexDirection: 'column',
   },

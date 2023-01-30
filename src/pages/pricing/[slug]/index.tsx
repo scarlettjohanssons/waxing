@@ -1,14 +1,14 @@
-import { homeActions } from '@/bus/home/actions';
-import Advice from '@/components/advice/Advice';
+import { pricingActions } from '@/bus/pricing/actions';
 import AppLayout from '@/layouts/AppLayouts';
 import { initializeStore } from '@/setup/configureStore';
 import { initialDispatcher } from '@/setup/initialDispatcher';
+import { Box } from '@mui/material';
 import { GetServerSideProps } from 'next';
 
-const AdvicePage = () => {
+const PricingPage = () => {
   return (
     <AppLayout>
-      <Advice />
+      <Box>index.tsx</Box>
     </AppLayout>
   );
 };
@@ -16,9 +16,10 @@ const AdvicePage = () => {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { store } = await initialDispatcher(context, initializeStore());
 
-  const id = context.params?.id;
+  const slug = context.params?.slug;
 
-  id && store.dispatch(homeActions.setCurrentAdvice(+id));
+  slug &&
+    store.dispatch(pricingActions.setCurrentPricePartOfBody(slug as string));
 
   const initialReduxState = store.getState();
 
@@ -29,4 +30,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-export default AdvicePage;
+export default PricingPage;
