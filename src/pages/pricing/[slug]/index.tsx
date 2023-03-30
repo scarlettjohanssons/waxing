@@ -1,14 +1,14 @@
 import { pricingActions } from '@/bus/pricing/actions';
+import PartOfBodyPrice from '@/components/price/PartOfBodyPrice';
 import AppLayout from '@/layouts/AppLayouts';
 import { initializeStore } from '@/setup/configureStore';
 import { initialDispatcher } from '@/setup/initialDispatcher';
-import { Box } from '@mui/material';
 import { GetServerSideProps } from 'next';
 
 const PricingPage = () => {
   return (
     <AppLayout>
-      <Box>index.tsx</Box>
+      <PartOfBodyPrice />
     </AppLayout>
   );
 };

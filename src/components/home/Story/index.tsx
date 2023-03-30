@@ -1,64 +1,59 @@
+import Sensor from '@/components/common/Sensor';
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { animated, Spring, useSpring } from 'react-spring';
 import { styles } from './style';
 
 const Story = () => {
-  // const [isVisibleImage, setIsVisibleImage] = useState(false);
-  // const [isVisibleClients, setIsVisibleClients] = useState(false);
-  // const happyCustomer = useSpring({
-  //   from: { val: 0 },
-  //   to: { val: isVisibleClients ? 789 : 0 },
-  //   config: { duration: 1000 },
-  // });
-  // const yearExperience = useSpring({
-  //   from: { val: 0 },
-  //   to: { val: isVisibleClients ? 100 : 0 },
-  //   config: { duration: 1000 },
-  // });
+  const [isVisibleImage, setIsVisibleImage] = useState(false);
+  const [isVisibleClients, setIsVisibleClients] = useState(false);
+  const happyCustomer = useSpring({
+    from: { val: 0 },
+    to: { val: isVisibleClients ? 789 : 0 },
+    config: { duration: 1000 },
+  });
+  const yearExperience = useSpring({
+    from: { val: 0 },
+    to: { val: isVisibleClients ? 100 : 0 },
+    config: { duration: 1000 },
+  });
 
   return (
     <Box sx={styles.root}>
       <Box sx={styles.imageWrapper}>
-        {/*<Sensor*/}
-        {/*  isVisible={isVisibleImage}*/}
-        {/*  setIsVisible={setIsVisibleImage}*/}
-        {/*  top={'30%'}*/}
-        {/*  bottom={'30%'}*/}
-        {/*/>*/}
-        {/*<Spring*/}
-        {/*  config={{*/}
-        {/*    duration: 500,*/}
-        {/*  }}*/}
-        {/*  from={{}}*/}
-        {/*  to={{*/}
-        {/*    opacity: isVisibleImage ? 1 : 0,*/}
-        {/*    transform: isVisibleImage ? 'translateX(0)' : 'translateX(-20%)',*/}
-        {/*  }}>*/}
-        {/*  {(styles: any) => {*/}
-        {/*    return (*/}
-        {/*      <animated.div style={styles}>*/}
-        {/*        <Image*/}
-        {/*          style={{*/}
-        {/*            borderBottomLeftRadius: '200px',*/}
-        {/*          }}*/}
-        {/*          src={BigImage}*/}
-        {/*          alt={''}*/}
-        {/*          width={600}*/}
-        {/*          height={400}*/}
-        {/*        />*/}
-        {/*      </animated.div>*/}
-        {/*    );*/}
-        {/*  }}*/}
-        {/*</Spring>*/}
-        <Image
-          style={{
-            borderBottomLeftRadius: '200px',
-          }}
-          src={'/story.jpeg'}
-          alt={''}
-          width={600}
-          height={400}
+        <Sensor
+          isVisible={isVisibleImage}
+          setIsVisible={setIsVisibleImage}
+          top={'30%'}
+          bottom={'30%'}
         />
+        <Spring
+          config={{
+            duration: 500,
+          }}
+          from={{}}
+          to={{
+            opacity: isVisibleImage ? 1 : 0,
+            transform: isVisibleImage ? 'translateX(0)' : 'translateX(-20%)',
+          }}>
+          {(styles: any) => {
+            return (
+              <animated.div style={styles}>
+                <Image
+                  style={{
+                    borderBottomLeftRadius: '200px',
+                  }}
+                  src={'/story.jpeg'}
+                  alt={''}
+                  width={600}
+                  height={400}
+                />
+              </animated.div>
+            );
+          }}
+        </Spring>
       </Box>
       <Box sx={styles.infoWrapper}>
         <Typography variant={'h2'}>Our Story</Typography>
@@ -68,9 +63,13 @@ const Story = () => {
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
           sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
         </Typography>
-        <Button variant={'secondary'} color={'secondary'} sx={styles.button}>
-          Read More
-        </Button>
+        <Link
+          href={'/about'}
+          style={{ textDecoration: 'none', color: 'transparent' }}>
+          <Button variant={'secondary'} color={'secondary'} sx={styles.button}>
+            Read More
+          </Button>
+        </Link>
         <Box
           display={'flex'}
           mt={'20px'}
@@ -78,12 +77,12 @@ const Story = () => {
           alignItems={'center'}
           gap={'10px'}
           position={'relative'}>
-          {/*<Sensor*/}
-          {/*  isVisible={isVisibleClients}*/}
-          {/*  setIsVisible={setIsVisibleClients}*/}
-          {/*  top={'30%'}*/}
-          {/*  bottom={'30%'}*/}
-          {/*/>*/}
+          <Sensor
+            isVisible={isVisibleClients}
+            setIsVisible={setIsVisibleClients}
+            top={'30%'}
+            bottom={'30%'}
+          />
           <Box sx={styles.numberWrapper}>
             <Box
               display={'flex'}
@@ -92,10 +91,9 @@ const Story = () => {
               mb={'40px'}>
               <Box display={'flex'}>
                 <Typography variant={'experience'}>
-                  {/*<animated.span>*/}
-                  {/*  {happyCustomer.val.interpolate((val) => Math.floor(val))}*/}
-                  {/*</animated.span>*/}
-                  789
+                  <animated.span>
+                    {happyCustomer.val.interpolate((val) => Math.floor(val))}
+                  </animated.span>
                 </Typography>
                 <Typography variant={'body2'}>+</Typography>
               </Box>
@@ -107,10 +105,9 @@ const Story = () => {
               flexDirection={'column'}>
               <Box display={'flex'}>
                 <Typography variant={'experience'}>
-                  {/*<animated.span>*/}
-                  {/*  {yearExperience.val.interpolate((val) => Math.floor(val))}*/}
-                  {/*</animated.span>*/}
-                  100
+                  <animated.span>
+                    {yearExperience.val.interpolate((val) => Math.floor(val))}
+                  </animated.span>
                 </Typography>
                 <Typography variant={'body2'}>+</Typography>
               </Box>
@@ -119,26 +116,30 @@ const Story = () => {
           </Box>
           <Box>
             <Box sx={styles.waxImage}>
-              {/*<Spring*/}
-              {/*  config={{*/}
-              {/*    duration: 500,*/}
-              {/*  }}*/}
-              {/*  from={{}}*/}
-              {/*  to={{*/}
-              {/*    opacity: isVisibleClients ? 1 : 0,*/}
-              {/*    transform: isVisibleClients*/}
-              {/*      ? 'translateX(0)'*/}
-              {/*      : 'translateX(-20%)',*/}
-              {/*  }}>*/}
-              {/*  {(styles: any) => {*/}
-              {/*    return (*/}
-              {/*      <animated.div style={styles}>*/}
-              {/*        <Image src={WaxImage} alt={''} width={300} height={200} />*/}
-              {/*      </animated.div>*/}
-              {/*    );*/}
-              {/*  }}*/}
-              {/*</Spring>*/}
-              <Image src={'/wax.webp'} alt={''} width={300} height={200} />
+              <Spring
+                config={{
+                  duration: 500,
+                }}
+                from={{}}
+                to={{
+                  opacity: isVisibleClients ? 1 : 0,
+                  transform: isVisibleClients
+                    ? 'translateX(0)'
+                    : 'translateX(-20%)',
+                }}>
+                {(styles: any) => {
+                  return (
+                    <animated.div style={styles}>
+                      <Image
+                        src={'/wax.webp'}
+                        alt={''}
+                        width={300}
+                        height={200}
+                      />
+                    </animated.div>
+                  );
+                }}
+              </Spring>
             </Box>
           </Box>
         </Box>

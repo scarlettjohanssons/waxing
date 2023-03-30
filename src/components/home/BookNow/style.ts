@@ -9,6 +9,7 @@ export const styles = {
     backgroundSize: 'cover',
   },
   infoWrapper: {
+    position: 'relative',
     background: '#FFF7EF',
     maxWidth: '680px',
     width: '100%',

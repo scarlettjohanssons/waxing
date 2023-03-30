@@ -1,19 +1,24 @@
-import { getPricing } from '@/bus/pricing/selectors';
+import { getPartOfPrice } from '@/bus/pricing/selectors';
 import { IPricingPart } from '@/bus/pricing/typedefs';
 import PageTitle from '@/components/common/PageTitle';
+import { partOfBodyTile } from '@/helpers/partOfBodyTile';
 import { Box, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { styles } from './style';
 
-type PriceProps = {};
+type PartOfBodyPriceProps = {};
 
-const Price: React.FC<PriceProps> = () => {
-  const pricing = useSelector(getPricing);
+const PartOfBodyPrice: React.FC<PartOfBodyPriceProps> = () => {
+  const price = useSelector(getPartOfPrice);
+  const router = useRouter();
 
   return (
     <Box sx={styles.root}>
-      <PageTitle title={'Price'} />
+      {router.query.slug && (
+        <PageTitle title={partOfBodyTile(router.query.slug)} />
+      )}
       <Box
         display={'flex'}
         flexDirection={'column'}
@@ -21,7 +26,7 @@ const Price: React.FC<PriceProps> = () => {
         padding={'0 20px'}
         maxWidth={'1200px'}
         margin={'20px auto'}>
-        {pricing.map((item: IPricingPart) => (
+        {price?.map((item: IPricingPart) => (
           <Box key={item.id} display={'flex'} justifyContent={'space-between'}>
             <Typography variant={'body2'} fontSize={'32px'}>
               {item.service}
@@ -36,4 +41,4 @@ const Price: React.FC<PriceProps> = () => {
   );
 };
 
-export default Price;
+export default PartOfBodyPrice;

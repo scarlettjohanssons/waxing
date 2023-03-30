@@ -29,4 +29,9 @@ export const styles = {
     display: 'flex',
     flexDirection: 'column',
   },
+  list: {
+    '& .MuiGrid-item': {
+      position: 'relative',
+    },
+  },
 };

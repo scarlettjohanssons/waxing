@@ -16,17 +16,14 @@ export const styles = {
     zIndex: -1,
   },
   imageWrapper: {
-    width: '300px',
+    maxWidth: '300px',
+    width: '100%',
     position: 'relative',
     transition: 'all 0.3s ease',
-    '@media (max-width: 768px)': {
-      display: 'none',
-    },
     img: {
       objectFit: 'cover',
-      width: '300px',
+      width: '100%',
       height: 'auto',
-      borderRadius: '12px',
     },
     '&:hover': {
       transform: 'translateY(-10px)',
@@ -34,8 +31,5 @@ export const styles = {
   },
   listItem: {
     borderLeft: '1px solid #6A473C',
-    '& p': {
-      textIndent: 0,
-    },
   },
 };
