@@ -32,4 +32,10 @@ export const styles = {
   listItem: {
     borderLeft: '1px solid #6A473C',
   },
+  map: {
+    height: '400px',
+    '& iframe': {
+      border: 0,
+    },
+  },
 };

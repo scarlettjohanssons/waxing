@@ -23,8 +23,6 @@ const Header = () => {
     dispatch(uiActions.setSidebarOpen(open));
   };
 
-  // const path = process.env.NODE_ENV === 'production' ? '/waxing' : '';
-
   return (
     <>
       <Box sx={styles.header}>
@@ -107,9 +105,6 @@ const Header = () => {
           <Box display={'flex'} gap={'20px'}>
             <Link href={'/pricing'} style={styles.link}>
               Pricing
-            </Link>
-            <Link href={'/blog'} style={styles.link}>
-              Blog
             </Link>
             <Link href={'/contact'} style={styles.link}>
               Contact
